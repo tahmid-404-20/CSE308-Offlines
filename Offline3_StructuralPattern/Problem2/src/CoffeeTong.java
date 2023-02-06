@@ -11,10 +11,11 @@ public class CoffeeTong {
     }
 
     public static void main(String[] args) {
-        Scanner scr = new Scanner(System.in);
-
         List<Component> coffeeList = new ArrayList<>();
         List<String> coffeeNameList = new ArrayList<>();
+
+        Scanner scr = new Scanner(System.in);
+
         System.out.println("Welcome to Coffee Tong!");
         System.out.println("Please choose your coffee:");
         while (true) {
