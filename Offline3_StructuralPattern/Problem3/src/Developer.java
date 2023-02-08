@@ -22,8 +22,9 @@ public class Developer extends Person{
     }
 
     @Override
-    public void hierarchy() {
-        System.out.println("\t\t- " + name);
+    public void hierarchy(int level) {
+        printNTabs(level);
+        System.out.println("- " + name);
     }
 
     @Override

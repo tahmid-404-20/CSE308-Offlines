@@ -26,10 +26,11 @@ public class ProjectManager extends Person{
     }
 
     @Override
-    public void hierarchy() {
-        System.out.println("\t- " + name + " (" + projectName + ")");
+    public void hierarchy(int level) {
+        printNTabs(level);
+        System.out.println("- " + name + " (" + projectName + ")");
         for (Person developer : developers.values()) {
-            developer.hierarchy();
+            developer.hierarchy(level +1);
         }
     }
 
@@ -72,8 +73,7 @@ public class ProjectManager extends Person{
 
     @Override
     public List<String> getChildrenNames() {
-        List<String> developerNames = new ArrayList<>();
-        developerNames.addAll(developers.keySet());
+        List<String> developerNames = new ArrayList<>(developers.keySet());
         return developerNames;
     }
 

@@ -20,10 +20,11 @@ public class SoftwareCompany extends Component{
     }
 
     @Override
-    public void hierarchy() {
+    public void hierarchy(int level) {
+        printNTabs(level);
         System.out.println("- " + name);
         for (Component projectManager : projectManagers.values()) {
-            projectManager.hierarchy();
+            projectManager.hierarchy(level +1);
         }
     }
 
@@ -67,8 +68,7 @@ public class SoftwareCompany extends Component{
 
     @Override
     public List<String> getChildrenNames() {
-        List<String> projectManagerNames = new ArrayList<>();
-        projectManagerNames.addAll(projectManagers.keySet());
+        List<String> projectManagerNames = new ArrayList<>(projectManagers.keySet());
         return projectManagerNames;
     }
 }

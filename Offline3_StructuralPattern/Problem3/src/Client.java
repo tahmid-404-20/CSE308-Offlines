@@ -320,7 +320,7 @@ public class Client {
                             break;
                         }
                         String companyName = chooseCompanyName(scr, softwareCompanies);
-                        softwareCompanies.get(companyName).hierarchy();
+                        softwareCompanies.get(companyName).hierarchy(0);
                         break;
                     case 11:
                         if(softwareCompanies.isEmpty()) {
@@ -329,10 +329,9 @@ public class Client {
                         }
                         String compName = chooseCompanyName(scr, softwareCompanies);
                         String projectManagerName = chooseProjectManagerName(scr, softwareCompanies, compName);
-                        softwareCompanies.get(compName).getChild(projectManagerName).hierarchy();
+                        softwareCompanies.get(compName).getChild(projectManagerName).hierarchy(0);
                         break;
                     default:
-                        System.out.println("Here in default");
                         System.out.println("Invalid input");
                 }
             } catch(Exception e) {

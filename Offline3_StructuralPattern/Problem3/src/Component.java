@@ -6,9 +6,14 @@ public abstract class Component {
     public String getName() {
         return name;
     }
+    protected void printNTabs(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print("\t");
+        }
+    }
 
     public abstract void details();
-    public abstract void hierarchy();
+    public abstract void hierarchy(int level);
 
     public abstract boolean addChild(String name);
     public abstract Component getChild(String name);
