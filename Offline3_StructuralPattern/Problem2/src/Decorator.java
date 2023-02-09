@@ -40,6 +40,6 @@ class ChocolateSauce extends Decorator {
     public ChocolateSauce(Component component) {
         this.component = component;
         description = "Chocolate Sauce";
-        price = 30;
+        price = 60;
     }
 }
