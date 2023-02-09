@@ -48,7 +48,7 @@ public class ProjectManager extends Person{
 
     @Override
     public Component getChild(String name) {
-        return null;
+        return developers.get(name);
     }
 
     @Override
