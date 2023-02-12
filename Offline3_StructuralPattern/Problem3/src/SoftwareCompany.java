@@ -16,7 +16,7 @@ public class SoftwareCompany extends Component{
     @Override
     public void details() {
         System.out.println("Company name: " + name);
-        System.out.println("Number of Project Managers and running projects: " + projectManagers.size());
+        System.out.println("Number of currently running projects: " + projectManagers.size());
     }
 
     @Override
@@ -68,7 +68,6 @@ public class SoftwareCompany extends Component{
 
     @Override
     public List<String> getChildrenNames() {
-        List<String> projectManagerNames = new ArrayList<>(projectManagers.keySet());
-        return projectManagerNames;
+        return new ArrayList<>(projectManagers.keySet());
     }
 }

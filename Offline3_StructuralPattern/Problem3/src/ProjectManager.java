@@ -73,8 +73,7 @@ public class ProjectManager extends Person{
 
     @Override
     public List<String> getChildrenNames() {
-        List<String> developerNames = new ArrayList<>(developers.keySet());
-        return developerNames;
+        return new ArrayList<>(developers.keySet());
     }
 
     //getters
